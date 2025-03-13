@@ -1,0 +1,40 @@
+Create a comprehensive Business Requirements Document for a commission processing system based on the following Synon-generated COBOL code: [paste your COBOL code here].
+The document should include:
+
+An executive summary explaining the program's purpose
+Key features and functionalities with numbered sections
+Detailed process flow including initialization, data retrieval, transaction processing, and reporting
+Business Rules (structured hierarchically as follows):
+
+[Rule Category] (e.g., General Initialization and Setup)
+1.1. [Rule Statement] - Written as a complete, actionable statement
+1.1.1. [Implementation Details] - Specific fields, values, and technical implementation
+1.2. [Next Rule Statement]
+[Next Rule Category] (e.g., Date Adjustments and Period Determination)
+2.1. [Rule Statement]
+2.1.1. [Implementation Details]
+
+
+
+For example:
+
+General Initialization and Setup
+1.1. Initialize all relevant fields to default values at the start of the program
+1.1.1. Set fields such as XYZ First Flag, ABC Total Hold Contractor/Dealer to their respective default values
+Date Adjustments and Period Determination
+2.1. Determine the correct processing period based on system parameters
+2.1.1. Extract month and year from PAR.USR Last Day of Month field
+Error handling procedures
+Technical parameters and configuration settings
+Data validation rules
+
+Additionally, create a detailed UML Activity Diagram that illustrates the complete process flow of the commission calculation system. The flowchart should:
+
+Show the sequential process from initialization to finalization
+Include decision points for all business rules
+Highlight data retrieval and processing steps
+Indicate error handling paths
+Use proper UML notation with swimlanes to separate different functional components
+Include clear labels for all actions and decisions
+
+Format the document with clear headings, bullet points, and a professional layout similar to a technical specification document. Include specific field names, data types, and business logic from the COBOL code."
