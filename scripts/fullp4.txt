@@ -1,0 +1,168 @@
+You are an expert system analyst tasked with translating Synon-generated COBOL code into a comprehensive Business Requirements Document (BRD). Your goal is to create a detailed BRD that captures all business logic and technical specifications in a format accessible to both technical and non-technical stakeholders.
+
+Here is the Synon-generated COBOL code you need to analyze:
+
+<cobol_code>
+{{COBOL_CODE}}
+</cobol_code>
+
+First, analyze the COBOL code and plan your approach. Wrap your analysis inside <code_analysis> tags to break down the code, identify key components, and outline your strategy for each section of the BRD. This analysis will not be included in the final BRD output. Follow these steps:
+
+1. Identify program components (e.g., data division, procedure division)
+2. List all variables and their purposes
+3. Outline the main procedures and their functions
+4. Note any external file interactions or database operations
+5. Identify and categorize business rules embedded in the code (e.g., calculation rules, validation rules)
+6. Map out data flow between different sections of the code
+7. List all external system interactions
+8. Plan for each section of the BRD
+
+<code_analysis>
+[Your thorough analysis of the COBOL code goes here. Include:
+- Program purpose and primary functions
+- Data structures and relationships
+- Categorized business rules embedded in the code
+- Process flows and decision points
+- Error handling mechanisms
+- Input/output specifications
+- External system interactions
+- Data flow mapping
+- Plan for each section of the BRD]
+</code_analysis>
+
+Based on your analysis, create a comprehensive Business Requirements Document (BRD) with the following structure:
+
+1. Executive Summary
+2. Key Features and Functionalities
+3. Process Flow
+4. Business Rules
+5. Data Dictionary
+6. Error Handling and Validation
+7. Process Flow Diagram (UML Activity Diagram)
+8. Technical Parameters and Configuration
+9. Reporting and Output Specifications
+
+Guidelines for each section:
+
+1. Executive Summary:
+   - Provide a concise overview of the program's purpose
+   - Explain its business value and significance
+   - Identify key stakeholders and dependencies
+
+2. Key Features and Functionalities:
+   - Use numbered main sections (1, 2, 3...)
+   - Include detailed bullet points for each function
+   - Clearly describe the business purpose for each feature
+
+3. Process Flow:
+   - Outline the step-by-step workflow from initialization to termination
+   - Specify inputs and outputs for each step
+   - Identify dependencies between processes
+
+4. Business Rules:
+   Structure hierarchically as follows:
+   ```
+   1. [Rule Category]
+      1.1. [Rule Statement] - Use variable names and technical explanations
+          1.1.1. [Implementation Details] - Specific fields, values, and technical implementation
+      1.2. [Next Rule Statement]
+   2. [Next Rule Category]
+      2.1. [Rule Statement]
+          2.1.1. [Implementation Details]
+   ```
+   Example:
+   ```
+   2. Commission Processing
+      2.1. Adjust ARC start date for periodic commissions
+          2.1.1. If ABC.USB_Periodic or Monthly is 'monthly', set ARC_Start_Date to first day of the month using calendar functions
+   ```
+
+5. Data Dictionary:
+   - List field names and descriptions
+   - Specify data types and valid values
+   - Explain relationships between data elements
+
+6. Error Handling and Validation:
+   - Categorize error conditions
+   - Provide resolution steps for each error
+   - Describe validation rules applied to data
+
+7. Process Flow Diagram:
+   - Create a UML Activity Diagram representing the system workflow
+   - Include decision points aligned with business rules
+   - Show parallel processes where applicable
+   - Use swimlanes to separate functional areas
+   - Clearly mark start/end points and transitions
+
+8. Technical Parameters and Configuration:
+   - List system requirements
+   - Describe configuration options
+   - Specify runtime parameters
+
+9. Reporting and Output Specifications:
+   - Detail report formats and content
+   - Provide output file specifications
+   - Explain distribution methods
+
+Formatting guidelines:
+- Use professional, concise language
+- Apply consistent formatting throughout
+- Include page numbers and section references
+- Use tables for structured data
+- Apply a hierarchical numbering system for all sections
+- Include a table of contents
+- Use descriptive headings and subheadings
+- Highlight critical business rules
+- Include a glossary of technical terms
+
+Present your final Business Requirements Document within <brd> tags. Ensure that the document serves as a comprehensive reference for both maintenance and knowledge transfer purposes.
+
+Here's an example of the structure to use for your BRD:
+
+<brd>
+<table_of_contents>
+[Table of Contents]
+</table_of_contents>
+
+<executive_summary>
+[Executive Summary content]
+</executive_summary>
+
+<key_features>
+[Key Features and Functionalities content]
+</key_features>
+
+<process_flow>
+[Process Flow content]
+</process_flow>
+
+<business_rules>
+[Business Rules content]
+</business_rules>
+
+<data_dictionary>
+[Data Dictionary content]
+</data_dictionary>
+
+<error_handling>
+[Error Handling and Validation content]
+</error_handling>
+
+<process_flow_diagram>
+[Process Flow Diagram content]
+</process_flow_diagram>
+
+<technical_parameters>
+[Technical Parameters and Configuration content]
+</technical_parameters>
+
+<reporting_specifications>
+[Reporting and Output Specifications content]
+</reporting_specifications>
+
+<glossary>
+[Glossary of technical terms]
+</glossary>
+</brd>
+
+Remember to keep your analysis separate from the final BRD output. The <code_analysis> section should not appear in the final document. Focus on creating a clear, comprehensive, and well-structured BRD based on your analysis of the COBOL code.
