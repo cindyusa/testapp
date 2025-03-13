@@ -1,0 +1,87 @@
+# Meta Prompt for Generating COBOL Code Documentation
+
+You are tasked with creating comprehensive documentation for a legacy SYNON-generated COBOL program. The documentation should extract key information from the code and organize it in a structured format that helps modern developers understand the system's functionality, data flows, and business rules.
+
+## Instructions
+
+Analyze the provided COBOL code (INVPRC44) and generate detailed documentation with the following sections:
+
+### 1. Program Purpose and Primary Functions
+- Extract the program's main purpose from comments and code structure
+- Identify when the program was created and by whom
+- List all primary functions the program performs
+- Note any modifications made over time (check for dated comments)
+- Summarize the overall role of this program in the business context
+
+### 2. Data Structures and Relationships
+- Document all file definitions (FD) and their purposes
+- Create a data dictionary of key fields and their business meanings
+- Map the relationships between different data structures
+- Identify any indexes and their usage
+- Note any data type peculiarities or special encodings (COMP-3, etc.)
+- Document any condition names (88-level items) and their significance
+
+### 3. Business Rules Embedded in the Code
+- Extract all business logic from conditional statements
+- Document threshold values and constants used in decision making
+- Identify any hardcoded business parameters
+- Note changes to business rules over time (based on dated comments)
+- Explain the significance of key calculations and algorithms
+- Document any industry-specific terminology or concepts
+
+### 4. Process Flows and Decision Points
+- Create a flowchart or sequence diagram of the main processing logic
+- Document all subroutines (PERFORMs) and their purposes
+- Identify key decision points and their business significance
+- Map exception paths and alternate flows
+- Note any batch processing logic or sequencing requirements
+- Document any timing considerations or processing windows
+
+### 5. Error Handling Mechanisms
+- List all possible error conditions and their codes
+- Document how errors are detected and managed
+- Explain the error reporting functionality
+- Note any critical errors that terminate processing
+- Identify any audit trails or error logging mechanisms
+
+### 6. Input/Output Specifications
+- Document all input files, their formats and sources
+- Document all output files, reports and their destinations
+- List report formats and their business purposes
+- Note any special file handling requirements
+- Document any file status checking procedures
+
+## Additional Requirements
+
+1. Look for hidden or implicit business rules in the code that might not be obvious
+2. Note any inconsistencies or potential issues in the codebase
+3. Pay special attention to comments that indicate modifications or updates over time
+4. Document any Y2K compliance modifications
+5. Highlight any performance considerations or optimizations
+6. Note any region-specific or locale-specific handling
+7. Identify any obsolete or deprecated functionality
+
+## Documentation Format
+
+The documentation should be clear, well-structured, and accessible to developers who may not be familiar with COBOL. Use tables, lists, and diagrams where appropriate to improve clarity. Avoid technical jargon where possible, and explain COBOL-specific terms when necessary.
+
+When documenting business rules or processes, focus on the "why" as well as the "what" to provide context for future maintenance.
+
+## Example Section (for reference)
+
+### Business Rules Example
+
+| Rule ID | Description | Implementation | Code Location |
+|---------|-------------|----------------|--------------|
+| BR001 | Items are considered low stock when below 60% of reorder point | IF WS-TEMP-QTY < (IM-REORDER-POINT * WS-LOW-THRESHOLD / 100) | Lines 450-455 |
+| BR002 | Month-end processing occurs when current day is ≥ 28 | IF WS-CURRENT-DAY >= 28 MOVE 'Y' TO WS-MONTH-END-SW | Lines 398-400 |
+
+## Important Notes
+
+1. Consider comments throughout the code that may indicate business rules or processing logic
+2. Note that the code may contain outdated or redundant sections
+3. Look for patterns in the code that suggest standardized approaches to common problems
+4. Pay attention to any code around date handling, especially pre/post Y2K modifications
+5. Identify any region-specific processing (the code appears to handle multiple warehouse regions)
+
+Please analyze the COBOL program thoroughly and create detailed documentation that would enable a modern development team to understand and maintain this legacy system.
